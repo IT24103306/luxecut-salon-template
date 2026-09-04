@@ -713,8 +713,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   min-height: 660px;
   background-image:
     linear-gradient(rgba(88, 35, 60, 0.08), rgba(88, 35, 60, 0.24)),
-    url("https://images.pexels.com/photos/29156971/pexels-photo-29156971.jpeg?auto=compress&cs=tinysrgb&w=1200");
-  background-position: center 30%;
+    url("/ann-traditional-bride.jpg");
+  background-position: center 43%;
   background-size: cover;
 }
 
