@@ -1761,6 +1761,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   background-color: #efd3df;
 }
 
+/* Show complete service photographs, without background-cover cropping. */
+.service-card .service-image,
+.service-card .service-image.bridal-image {
+  display: block;
+  height: auto;
+  aspect-ratio: auto;
+  background: #fff2f6;
+}
+.service-card .service-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+}
+.service-image-caption {
+  display: block;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  background: #fff2f6;
+  color: #694252;
+}
+
 /* Clear phone actions and an uncropped bridal portrait. */
 .desi-highlight-image { background: #efd3df; display: flex; align-items: center; justify-content: center; }
 .desi-highlight-image img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; }

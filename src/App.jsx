@@ -20,6 +20,14 @@ const popularServices = [
 ];
 
 const whatsappNumber = "94743174347";
+const servicePhotos = {
+  "nails-image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=max&w=1000&q=85",
+  "lashes-image": "/ann-service-lashes.webp",
+  "hair-extensions-image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=max&w=1000&q=85",
+  "microblading-image": "/ann-service-microblading.webp",
+  "powder-brows-image": "/ann-service-powder-brows.webp",
+  "bridal-image": "/ann-traditional-bride.jpg",
+};
 const facebookUrl = "https://www.facebook.com/p/ANN-Beauty-Bar-61575069462767/";
 const instagramUrl = "https://www.instagram.com/annbeautybar_pvt_ltd?igsi=MTR5dDhjamdiZnE2aw==";
 const reviewWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello ANN Beauty Bar,\n\nI would like to share my feedback:\n\n")}`;
@@ -120,9 +128,10 @@ Please confirm the availability and price. Thank you.`;
             {popularServices.map((service, index) => (
               <article className="service-card" key={service.name}>
                 <div className={`service-image ${service.imageClass}`}>
-                  {["hair-extensions-image", "microblading-image", "powder-brows-image"].includes(service.imageClass) && <small className="service-photo-note">Style inspiration · not a treatment result</small>}
+                  <img src={servicePhotos[service.imageClass]} alt={`${service.name} — illustrative style inspiration, not ANN client work`} loading="lazy" decoding="async" />
                   <span>0{index + 1}</span>
                 </div>
+                <small className="service-image-caption">Style inspiration · not ANN client work</small>
                 <div className="service-details">
                   <h3>{service.name}</h3><p>{service.description}</p>
                   <div className="service-meta"><span>PERSONALISED SERVICE</span><strong>Price on enquiry</strong></div>
