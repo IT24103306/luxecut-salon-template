@@ -189,18 +189,14 @@ Please confirm the availability and price. Thank you.`;
           </div>
           <div className="gallery-grid">
             {[
-              ["https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85", "Nail artistry inspiration", "Nail Art"],
-              ["https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85", "Eye makeup and lash inspiration", "Lashes"],
-              ["https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85", "Hair styling inspiration", "Hair Styling Inspiration"],
-              ["https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85", "Hair washing inspiration", "Hair Care Inspiration"],
-              ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85", "Facial care inspiration", "Facial Care Inspiration"],
-              ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85", "Professional beauty care inspiration", "Beauty Care"],
-              ["https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=85", "Elegant salon interior", "Salon Ambience"],
-              ["https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85", "Modern salon setting", "Your Beauty Space"],
-            ].map(([src, alt, label], index) => (
-              <div className={`gallery-item ${index === 0 ? "gallery-large" : ""} ${index === 7 ? "gallery-wide" : ""}`} key={label}>
-                <img src={src} alt={alt} loading="lazy" decoding="async" /><div className="gallery-overlay"><span>{label}</span></div>
-              </div>
+              ["/ann-traditional-bride.jpg", "Red and gold saree with traditional bridal jewellery", "Timeless Bridal", "Saree, gold & a beautiful smile"],
+              ["https://images.pexels.com/photos/939834/pexels-photo-939834.jpeg?auto=compress&cs=tinysrgb&w=900", "Soft pink manicure against a knitted sweater", "Soft Pink Details", "Delicate colour, polished elegance"],
+              ["https://images.pexels.com/photos/28752502/pexels-photo-28752502/free-photo-of-elegant-kerala-saree-fashion-with-jasmine-flowers.jpeg?auto=compress&cs=tinysrgb&w=900", "Traditional saree details with jasmine flowers held in the hands", "Jasmine & Tradition", "Little details, lasting memories"],
+            ].map(([src, alt, label, description]) => (
+              <figure className="gallery-item" key={label}>
+                <img src={src} alt={alt} loading="lazy" decoding="async" />
+                <figcaption className="gallery-overlay"><span>{label}</span><small>{description}</small></figcaption>
+              </figure>
             ))}
           </div>
         </section>
