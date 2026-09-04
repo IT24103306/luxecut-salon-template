@@ -171,7 +171,7 @@ Please confirm the availability and price. Thank you.`;
         </section>
 
         <section className="desi-highlight">
-          <div className="desi-highlight-image" role="img" aria-label="Bridal beauty inspiration"></div>
+          <div className="desi-highlight-image" role="img" aria-label="Traditional red saree and gold jewellery — stock bridal inspiration"></div>
           <div className="desi-highlight-content">
             <p>BRIDAL & CELEBRATION BEAUTY</p>
             <h2>Tradition, Elegance & Your Story</h2>
