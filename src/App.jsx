@@ -150,7 +150,7 @@ Please confirm the availability and price. Thank you.`;
 
         <section className="about-section" id="about">
           <div className="about-images">
-            <div className="about-main-image"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Beauty service inspiration" /></div>
+            <div className="about-main-image"><img src="/ann-traditional-bride.jpg" alt="Traditional red saree and gold jewellery — stock bridal inspiration" /></div>
             <div className="experience-box"><strong>6</strong><span>Specialist Services</span></div>
           </div>
           <div className="about-content">
