@@ -355,7 +355,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .bridal-image {
-  background-image: url("https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85");
+  background-image: url("/ann-traditional-bride.jpg");
+  background-position: center 35%;
 }
 
 .service-photo-note { position: absolute; bottom: 0; left: 0; right: 0; padding: 9px 12px; color: #fff; background: #30212ae6; font-size: 11px; line-height: 1.5; }
@@ -1723,7 +1724,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .section-heading h2 { font-size: 36px; line-height: 1.1; }
   .section-heading > span { font-size: 16px; line-height: 1.6; }
   .services-grid { gap: 12px; }
-  .service-card .service-image { display: none; }
+  .service-card .service-image { display: block; height: 170px; }
   .service-details { padding: 18px; }
   .service-details h3 { font-size: 25px; }
   .service-details p { font-size: 16px; line-height: 1.5; }
@@ -1748,4 +1749,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: clamp(170px, 48vw, 250px); gap: 10px; }
   .gallery-overlay { padding: 12px; }
   .gallery-overlay span { font-size: 20px; }
+}
+
+/* Clear phone actions and an uncropped bridal portrait. */
+.desi-highlight-image { background: #efd3df; display: flex; align-items: center; justify-content: center; }
+.desi-highlight-image img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; }
+.landing-topbar .topbar-call { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; display: inline-flex; align-items: center; }
+.booking-contact-list .call-now-button, .contact-details .call-now-button {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+  max-width: 100%; padding: 14px 18px; border-radius: 10px; background: #8c204e;
+  color: #fff; font-family: inherit; font-size: 16px; font-weight: 700; line-height: 1.5;
+  text-decoration: none; border: 2px solid #8c204e;
+}
+.call-now-button:hover { filter: brightness(1.1); }
+.call-now-button:focus-visible, .topbar-call:focus-visible { outline: 3px solid #30212a; outline-offset: 4px; }
+.call-help { display: block; margin-top: 8px; font-size: 14px; line-height: 1.5; }
+@media (max-width: 650px) {
+  .desi-highlight-image { height: auto; min-height: 0; }
+  .desi-highlight-image img { max-width: 420px; max-height: none; }
+  .service-photo-note { font-size: 12px; padding: 6px 10px; }
 }

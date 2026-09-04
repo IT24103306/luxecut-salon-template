@@ -71,7 +71,7 @@ Please confirm the availability and price. Thank you.`;
         <div className="landing-topbar">
           <span>2nd Cross, Bazaar Street, Batticaloa</span>
           <span className="topbar-tagline">Your Beauty, Our Art</span>
-          <a href="tel:+94743174347">+94 74 317 4347</a>
+          <a href="tel:+94743174347" className="topbar-call">Call Now: +94 74 317 4347</a>
         </div>
         <nav className="navbar">
           <a href="#home" className="logo" aria-label="ANN Beauty Bar home">
@@ -157,7 +157,7 @@ Please confirm the availability and price. Thank you.`;
         </section>
 
         <section className="desi-highlight">
-          <div className="desi-highlight-image" role="img" aria-label="Traditional red saree and gold jewellery — stock bridal inspiration"></div>
+          <div className="desi-highlight-image"><img src="/ann-traditional-bride.jpg" alt="Full traditional red saree and gold jewellery portrait — stock bridal inspiration" loading="lazy" decoding="async" /></div>
           <div className="desi-highlight-content">
             <p>BRIDAL & CELEBRATION BEAUTY</p>
             <h2>Tradition, Elegance & Your Story</h2>
@@ -192,7 +192,7 @@ Please confirm the availability and price. Thank you.`;
             <p className="booking-label">BOOK YOUR VISIT</p><h2>Request an Appointment</h2>
             <p className="booking-description">Select one or more services and share your preferred date and time. Your request will open in WhatsApp for confirmation.</p>
             <div className="booking-contact-list">
-              <div><span>PHONE & WHATSAPP</span><a href="tel:+94743174347">+94 74 317 4347</a></div>
+              <div><span>PHONE</span><a className="call-now-button" href="tel:+94743174347">Call Now · +94 74 317 4347</a><small className="call-help">Tap to call our salon</small></div>
               <div><span>LOCATION</span><p>2nd Cross, Bazaar Street, Batticaloa</p></div>
               <div><span>OPENING HOURS</span><p>Monday – Saturday: 9:00 AM – 5:00 PM<br />Sunday: Closed</p></div>
             </div>
@@ -249,7 +249,7 @@ Please confirm the availability and price. Thank you.`;
             <p>VISIT ANN BEAUTY BAR</p><h2>Your Next Beauty Moment Starts Here</h2>
             <div className="contact-details">
               <div><span>ADDRESS</span><p>2nd Cross, Bazaar Street, Batticaloa</p></div>
-              <div><span>CALL OR WHATSAPP</span><a href="tel:+94743174347">+94 74 317 4347</a></div>
+              <div><span>CALL OUR SALON</span><a className="call-now-button" href="tel:+94743174347">Call Now · +94 74 317 4347</a><small className="call-help">Tap to call our salon</small></div>
               <div><span>FACEBOOK</span><a href={facebookUrl} target="_blank" rel="noreferrer">ANN Beauty Bar</a></div>
               <div><span>INSTAGRAM</span><a href={instagramUrl} target="_blank" rel="noreferrer">@annbeautybar_pvt_ltd</a></div>
             </div>
