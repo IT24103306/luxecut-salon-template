@@ -88,7 +88,12 @@ Please confirm the availability and price. Thank you.`;
 
   return (
     <div className="app">
-      <header className="header">
+      <header className="header landing-header">
+        <div className="landing-topbar">
+          <span>2nd Cross, Bazaar Street, Batticaloa</span>
+          <span className="topbar-tagline">Your Beauty, Our Art</span>
+          <a href="tel:+94743174347">+94 74 317 4347</a>
+        </div>
         <nav className="navbar">
           <a href="#home" className="logo" aria-label="ANN Beauty Bar home">
             <span className="logo-mark">A</span>
@@ -111,18 +116,20 @@ Please confirm the availability and price. Thank you.`;
       </header>
 
       <main>
-        <section className="hero" id="home">
-          <div className="hero-overlay"></div>
+        <section className="hero reference-hero" id="home">
+          <img className="hero-editorial-image" src="/ann-beauty-hero.webp" alt="Soft rose makeup and elegant hairstyling — illustrative beauty portrait" fetchPriority="high" />
+          <div className="hero-overlay" aria-hidden="true"></div>
           <div className="hero-content">
             <p className="hero-label">WELCOME TO ANN BEAUTY BAR</p>
-            <h1>Your Beauty.<br />Our Art.</h1>
+            <h1>Your Beauty.<br /><em>Our Art.</em></h1>
             <p className="hero-description">Nails, lashes, hair extensions, brows and bridal beauty services in the heart of Batticaloa.</p>
             <div className="hero-buttons">
               <a href="#booking" className="hero-primary-button">Book via WhatsApp</a>
               <a href="#services" className="hero-secondary-button">Explore Services</a>
             </div>
+            <div className="hero-hours"><span>MONDAY — SATURDAY</span><p>9:00 AM — 5:00 PM</p></div>
           </div>
-          <div className="hero-hours"><span>MONDAY — SATURDAY</span><p>9:00 AM — 5:00 PM</p></div>
+          <div className="hero-beauty-seal"><strong>6</strong><span>SPECIALIST<br />BEAUTY SERVICES</span></div>
         </section>
 
         <section className="services-section" id="services">
