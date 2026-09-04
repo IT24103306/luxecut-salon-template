@@ -171,20 +171,16 @@ Please confirm the availability and price. Thank you.`;
         <section className="gallery-section" id="gallery">
           <div className="section-heading">
             <p>STYLE INSPIRATION</p><h2>Beauty Gallery</h2>
-            <span>A curated inspiration gallery. These stock images are not ANN Beauty Bar client work.</span>
+            <span>Four looks to inspire your visit. Stock and illustrative images, not ANN Beauty Bar client work.</span>
           </div>
           <div className="gallery-grid">
             {[
-              ["https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85", "Nail artistry inspiration", "Nail Art"],
-              ["https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85", "Eye makeup and lash inspiration", "Lashes"],
-              ["https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85", "Hair styling inspiration", "Hair Styling Inspiration"],
-              ["https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85", "Hair washing inspiration", "Hair Care Inspiration"],
-              ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85", "Facial care inspiration", "Facial Care Inspiration"],
-              ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85", "Professional beauty care inspiration", "Beauty Care"],
-              ["https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=85", "Elegant salon interior", "Salon Ambience"],
-              ["https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85", "Modern salon setting", "Your Beauty Space"],
-            ].map(([src, alt, label], index) => (
-              <div className={`gallery-item ${index === 0 ? "gallery-large" : ""} ${index === 7 ? "gallery-wide" : ""}`} key={label}>
+              ["/ann-traditional-bride.jpg", "Red saree and gold jewellery — stock bridal inspiration", "Traditional Bridal"],
+              ["/ann-beauty-hero.webp", "Illustrative portrait with soft rose makeup", "Soft Glam"],
+              ["/ann-pink-makeup.webp", "Pink cosmetics and roses — illustrative beauty styling", "Beauty Essentials"],
+              ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85", "Long flowing waves — stock hair inspiration", "Glossy Waves"],
+            ].map(([src, alt, label]) => (
+              <div className="gallery-item" key={label}>
                 <img src={src} alt={alt} loading="lazy" decoding="async" /><div className="gallery-overlay"><span>{label}</span></div>
               </div>
             ))}
