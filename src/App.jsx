@@ -24,6 +24,27 @@ const facebookUrl = "https://www.facebook.com/p/ANN-Beauty-Bar-61575069462767/";
 const instagramUrl = "https://www.instagram.com/annbeautybar_pvt_ltd?igsi=MTR5dDhjamdiZnE2aw==";
 const reviewWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello ANN Beauty Bar,\n\nI would like to share my feedback:\n\n")}`;
 
+function ServiceIllustration({ type }) {
+  const hair = type === "hair-extensions-image";
+  return (
+    <svg className="service-illustration" viewBox="0 0 360 260" role="img" aria-label={hair ? "Hair extensions illustration" : "Brow shaping illustration"}>
+      <circle cx="180" cy="130" r="100" fill="#f8dce6" />
+      <g fill="none" stroke="#71364f" strokeWidth="3" strokeLinecap="round">
+        {hair ? <>
+          <path d="M132 63 Q180 35 228 63 L228 83 Q180 65 132 83 Z" fill="#dba0b6" />
+          {[140, 156, 172, 188, 204, 220].map(x => <path key={x} d={`M${x} 82 C${x-25} 125 ${x+25} 166 ${x} 211`} />)}
+        </> : <>
+          <path d="M80 113 Q125 65 170 104 M194 104 Q239 65 284 113" strokeWidth={type === "powder-brows-image" ? 12 : 5} opacity=".8" />
+          <path d="M88 139 Q126 111 164 139 M198 139 Q236 111 274 139" />
+          <path d="M111 133 Q126 159 141 133 M221 133 Q236 159 251 133 M182 127 L177 165 L188 165" />
+          {type === "microblading-image" && [0,1,2,3,4,5].map(i => <path key={i} d={`M${91+i*12} ${102-i*2} l-4 -9`} />)}
+        </>}
+      </g>
+      <text x="180" y="245" textAnchor="middle" fill="#71364f" fontSize="10" letterSpacing="3">SERVICE ILLUSTRATION</text>
+    </svg>
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedServices, setSelectedServices] = useState([]);
@@ -112,7 +133,10 @@ Please confirm the availability and price. Thank you.`;
           <div className="services-grid">
             {popularServices.map((service, index) => (
               <article className="service-card" key={service.name}>
-                <div className={`service-image ${service.imageClass}`}><span>0{index + 1}</span></div>
+                <div className={`service-image ${service.imageClass}`}>
+                  {["hair-extensions-image", "microblading-image", "powder-brows-image"].includes(service.imageClass) && <ServiceIllustration type={service.imageClass} />}
+                  <span>0{index + 1}</span>
+                </div>
                 <div className="service-details">
                   <h3>{service.name}</h3><p>{service.description}</p>
                   <div className="service-meta"><span>PERSONALISED SERVICE</span><strong>Price on enquiry</strong></div>
@@ -151,7 +175,8 @@ Please confirm the availability and price. Thank you.`;
           <div className="desi-highlight-content">
             <p>BRIDAL & CELEBRATION BEAUTY</p>
             <h2>Tradition, Elegance & Your Story</h2>
-            <span className="desi-ornament">✦</span>
+            <span className="desi-ornament" aria-hidden="true">❀</span>
+            <p className="local-welcome" lang="ta">வணக்கம் · மட்டக்களப்பு</p>
             <p className="desi-copy">From timeless bridal elegance to modern celebration looks, every detail is designed to complement your outfit, jewellery and personal style.</p>
             <a href="#booking" className="about-button">Plan Your Bridal Look</a>
           </div>
@@ -160,21 +185,21 @@ Please confirm the availability and price. Thank you.`;
         <section className="gallery-section" id="gallery">
           <div className="section-heading">
             <p>STYLE INSPIRATION</p><h2>Beauty Gallery</h2>
-            <span>Discover beautiful details, polished finishes and looks for every special moment.</span>
+            <span>A curated inspiration gallery. These stock images are not ANN Beauty Bar client work.</span>
           </div>
           <div className="gallery-grid">
             {[
               ["https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85", "Nail artistry inspiration", "Nail Art"],
               ["https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85", "Eye makeup and lash inspiration", "Lashes"],
-              ["https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85", "Hair extension inspiration", "Hair Extensions"],
-              ["https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85", "Bridal hairstyle inspiration", "Bridal Beauty"],
-              ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85", "Brow and facial beauty inspiration", "Beautiful Brows"],
+              ["https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85", "Hair styling inspiration", "Hair Styling Inspiration"],
+              ["https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85", "Hair washing inspiration", "Hair Care Inspiration"],
+              ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85", "Facial care inspiration", "Facial Care Inspiration"],
               ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85", "Professional beauty care inspiration", "Beauty Care"],
               ["https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=85", "Elegant salon interior", "Salon Ambience"],
               ["https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85", "Modern salon setting", "Your Beauty Space"],
             ].map(([src, alt, label], index) => (
               <div className={`gallery-item ${index === 0 ? "gallery-large" : ""} ${index === 7 ? "gallery-wide" : ""}`} key={label}>
-                <img src={src} alt={alt} /><div className="gallery-overlay"><span>{label}</span></div>
+                <img src={src} alt={alt} loading="lazy" decoding="async" /><div className="gallery-overlay"><span>{label}</span></div>
               </div>
             ))}
           </div>
@@ -227,7 +252,6 @@ Please confirm the availability and price. Thank you.`;
             <div className="review-quote-mark">“</div>
             <p className="review-label">CUSTOMER REVIEWS</p>
             <h2>Your Experience Matters</h2>
-            <div className="review-stars-display">★★★★★</div>
             <p className="review-collection-copy">
               Verified customer stories will be featured here soon. Visited
               ANN Beauty Bar? Share your experience with us on WhatsApp.
