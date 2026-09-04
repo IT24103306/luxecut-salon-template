@@ -1751,6 +1751,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .gallery-overlay span { font-size: 20px; }
 }
 
+/* Keep the entire bridal photo visible in the service card on every screen. */
+.service-card .service-image.bridal-image {
+  height: auto;
+  aspect-ratio: 2 / 3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #efd3df;
+}
+
 /* Clear phone actions and an uncropped bridal portrait. */
 .desi-highlight-image { background: #efd3df; display: flex; align-items: center; justify-content: center; }
 .desi-highlight-image img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; }
