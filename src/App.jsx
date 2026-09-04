@@ -24,27 +24,6 @@ const facebookUrl = "https://www.facebook.com/p/ANN-Beauty-Bar-61575069462767/";
 const instagramUrl = "https://www.instagram.com/annbeautybar_pvt_ltd?igsi=MTR5dDhjamdiZnE2aw==";
 const reviewWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello ANN Beauty Bar,\n\nI would like to share my feedback:\n\n")}`;
 
-function ServiceIllustration({ type }) {
-  const hair = type === "hair-extensions-image";
-  return (
-    <svg className="service-illustration" viewBox="0 0 360 260" role="img" aria-label={hair ? "Hair extensions illustration" : "Brow shaping illustration"}>
-      <circle cx="180" cy="130" r="100" fill="#f8dce6" />
-      <g fill="none" stroke="#71364f" strokeWidth="3" strokeLinecap="round">
-        {hair ? <>
-          <path d="M132 63 Q180 35 228 63 L228 83 Q180 65 132 83 Z" fill="#dba0b6" />
-          {[140, 156, 172, 188, 204, 220].map(x => <path key={x} d={`M${x} 82 C${x-25} 125 ${x+25} 166 ${x} 211`} />)}
-        </> : <>
-          <path d="M80 113 Q125 65 170 104 M194 104 Q239 65 284 113" strokeWidth={type === "powder-brows-image" ? 12 : 5} opacity=".8" />
-          <path d="M88 139 Q126 111 164 139 M198 139 Q236 111 274 139" />
-          <path d="M111 133 Q126 159 141 133 M221 133 Q236 159 251 133 M182 127 L177 165 L188 165" />
-          {type === "microblading-image" && [0,1,2,3,4,5].map(i => <path key={i} d={`M${91+i*12} ${102-i*2} l-4 -9`} />)}
-        </>}
-      </g>
-      <text x="180" y="245" textAnchor="middle" fill="#71364f" fontSize="10" letterSpacing="3">SERVICE ILLUSTRATION</text>
-    </svg>
-  );
-}
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedServices, setSelectedServices] = useState([]);
@@ -141,7 +120,7 @@ Please confirm the availability and price. Thank you.`;
             {popularServices.map((service, index) => (
               <article className="service-card" key={service.name}>
                 <div className={`service-image ${service.imageClass}`}>
-                  {["hair-extensions-image", "microblading-image", "powder-brows-image"].includes(service.imageClass) && <ServiceIllustration type={service.imageClass} />}
+                  {["hair-extensions-image", "microblading-image", "powder-brows-image"].includes(service.imageClass) && <small className="service-photo-note">Style inspiration · not a treatment result</small>}
                   <span>0{index + 1}</span>
                 </div>
                 <div className="service-details">
