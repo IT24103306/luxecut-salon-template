@@ -1,9 +1,11 @@
 :root {
-  --black: #71364f;
-  --gold: #d58eaa;
-  --cream: #fff0f6;
+  --black: #641b40;
+  --gold: #a72c63;
+  --cream: #ffe4ef;
   --white: #fffafd;
-  --gray: #765f68;
+  --gray: #694252;
+  --pink: #bc326c;
+  --pink-deep: #8c204e;
 }
 
 .app {
@@ -1485,4 +1487,72 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Rich rose collection: saturated accents with calm, readable surfaces. */
+.app { color: var(--black); }
+.header { background: #fff5f9; border-bottom: 1px solid #edb2cb; }
+.logo-mark {
+  background: linear-gradient(145deg, #dc6096, #982251);
+  box-shadow: 0 6px 18px rgba(152, 34, 81, .22);
+}
+.hero-overlay {
+  background: linear-gradient(100deg, rgba(71, 12, 39, .91), rgba(145, 30, 77, .75) 55%, rgba(201, 70, 125, .38));
+}
+.hero-description { color: #fff1f7; }
+.hero-primary-button { border-radius: 8px; box-shadow: 0 8px 24px #42102a30; }
+.hero-secondary-button { border-radius: 8px; }
+.services-section {
+  background: radial-gradient(ellipse at top right, #ffc8df, transparent 65%), #ffeaf2;
+}
+.section-heading h2, .about-content h2 { color: var(--black); }
+.service-card {
+  border: 1px solid #f0b9cf;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(100, 27, 64, .07);
+}
+.service-card:hover { box-shadow: 0 18px 38px rgba(100, 27, 64, .15); }
+.service-image span { background: #92234fd9; border-radius: 0 0 12px 0; }
+.service-meta { border-color: #efd0dd; }
+.book-button, .mobile-book-button, .view-services-button, .about-button,
+.submit-booking-button, .review-button, .map-button {
+  color: #fff;
+  background: linear-gradient(120deg, var(--pink), var(--pink-deep));
+  border-color: var(--pink-deep);
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(140, 32, 78, .15);
+}
+.book-button:hover, .mobile-book-button:hover, .view-services-button:hover,
+.about-button:hover, .submit-booking-button:hover, .review-button:hover, .map-button:hover {
+  color: #fff;
+  background: #791b43;
+}
+.nav-links .mobile-book-button { color: #fff; }
+.about-main-image, .experience-box { border-radius: 16px; }
+.experience-box { background: linear-gradient(140deg, #ab2d63, #641b40); }
+.experience-box strong { color: #ffd4e7; }
+.desi-highlight { background-color: #f5b4d0; }
+.desi-highlight-content {
+  background-image: radial-gradient(circle at 80% 15%, #ffffff42 0 2px, transparent 3px), linear-gradient(145deg, #fbc8dd, #efa3c5);
+  background-size: 32px 32px, auto;
+}
+.desi-highlight-content h2, .local-welcome, .desi-highlight-content > p:first-child { color: #641b40; }
+.desi-copy { color: #603046; }
+.gallery-section { background: linear-gradient(135deg, #86204d, #50142e); }
+.gallery-section .section-heading > p { color: #ffc4dd; }
+.gallery-section .section-heading h2 { color: #fffafd; }
+.gallery-section .section-heading > span { color: #f6dce7; }
+.gallery-item { border-radius: 14px; }
+.booking-section { background: linear-gradient(135deg, #ffdfed, #f8bfd7); }
+.booking-form { border: 1px solid #eeb6cf; border-radius: 18px; box-shadow: 0 18px 45px #641b4012; }
+.form-group input, .form-group select, .form-group textarea, .service-checkbox { border-radius: 8px; }
+.service-checkbox:has(input:checked) { background: #ffd8e9; border-color: #a72c63; }
+.booking-summary { border-radius: 10px; background: #791f49; }
+.booking-summary span { color: #ffd3e6; }
+.review-collection-card { border-radius: 20px; background: linear-gradient(140deg, #fff0f7, #f7bdd5); }
+.contact-section { background: #f3b3ce; }
+.footer { background: #481129; }
+.footer-links a:hover { color: #ffd0e4; }
+@media (max-width: 850px) {
+  .hero-overlay { background: linear-gradient(160deg, rgba(80, 17, 44, .86), rgba(143, 31, 77, .78)); }
 }
