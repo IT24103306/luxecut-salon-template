@@ -11,14 +11,18 @@ const salonServices = [
 ];
 
 const popularServices = [
-  { name: "Nail Extensions & Nail Art", description: "Elegant nail extensions and creative nail art tailored to your style.", imageClass: "haircut-image" },
-  { name: "Eyelash Extensions", description: "Beautiful lash enhancements designed to complement your natural features.", imageClass: "colouring-image" },
-  { name: "Bridal Makeup", description: "Personalised bridal looks created for your special day and celebration.", imageClass: "facial-image" },
+  { name: "Nail Extensions & Nail Art", description: "Elegant extensions, clean finishes and statement nail art tailored to your style.", imageClass: "nails-image" },
+  { name: "Eyelash Extensions", description: "Soft, defined lash enhancements designed to complement your natural features.", imageClass: "lashes-image" },
+  { name: "Permanent Hair Extensions", description: "Beautiful added length and volume, personalised to blend with your own hair.", imageClass: "hair-extensions-image" },
+  { name: "Microblading", description: "Natural-looking brow definition shaped to flatter your unique face.", imageClass: "microblading-image" },
+  { name: "Powder Brows", description: "A softly shaded, polished brow finish for an effortlessly defined look.", imageClass: "powder-brows-image" },
+  { name: "Bridal Makeup", description: "Personalised bridal beauty for traditional ceremonies, receptions and celebrations.", imageClass: "bridal-image" },
 ];
 
 const whatsappNumber = "94743174347";
 const facebookUrl = "https://www.facebook.com/p/ANN-Beauty-Bar-61575069462767/";
 const instagramUrl = "https://www.instagram.com/annbeautybar_pvt_ltd?igsi=MTR5dDhjamdiZnE2aw==";
+const reviewWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello ANN Beauty Bar,\n\nI would like to share my feedback:\n\n")}`;
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,20 +146,34 @@ Please confirm the availability and price. Thank you.`;
           </div>
         </section>
 
+        <section className="desi-highlight">
+          <div className="desi-highlight-image" role="img" aria-label="Bridal beauty inspiration"></div>
+          <div className="desi-highlight-content">
+            <p>BRIDAL & CELEBRATION BEAUTY</p>
+            <h2>Tradition, Elegance & Your Story</h2>
+            <span className="desi-ornament">✦</span>
+            <p className="desi-copy">From timeless bridal elegance to modern celebration looks, every detail is designed to complement your outfit, jewellery and personal style.</p>
+            <a href="#booking" className="about-button">Plan Your Bridal Look</a>
+          </div>
+        </section>
+
         <section className="gallery-section" id="gallery">
           <div className="section-heading">
-            <p>PREVIEW GALLERY</p><h2>Beauty Inspiration</h2>
-            <span>Preview imagery for the website. ANN Beauty Bar’s original work photos will be added before launch.</span>
+            <p>STYLE INSPIRATION</p><h2>Beauty Gallery</h2>
+            <span>Discover beautiful details, polished finishes and looks for every special moment.</span>
           </div>
           <div className="gallery-grid">
             {[
               ["https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85", "Nail artistry inspiration", "Nail Art"],
-              ["https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=85", "Eyelash beauty inspiration", "Lashes"],
-              ["https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=800&q=85", "Hair extension inspiration", "Hair Extensions"],
+              ["https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85", "Eye makeup and lash inspiration", "Lashes"],
+              ["https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85", "Hair extension inspiration", "Hair Extensions"],
               ["https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85", "Bridal hairstyle inspiration", "Bridal Beauty"],
-              ["https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1000&q=85", "Makeup inspiration", "Makeup"],
+              ["https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85", "Brow and facial beauty inspiration", "Beautiful Brows"],
+              ["https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85", "Professional beauty care inspiration", "Beauty Care"],
+              ["https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=85", "Elegant salon interior", "Salon Ambience"],
+              ["https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85", "Modern salon setting", "Your Beauty Space"],
             ].map(([src, alt, label], index) => (
-              <div className={`gallery-item ${index === 0 ? "gallery-large" : ""} ${index === 4 ? "gallery-wide" : ""}`} key={label}>
+              <div className={`gallery-item ${index === 0 ? "gallery-large" : ""} ${index === 7 ? "gallery-wide" : ""}`} key={label}>
                 <img src={src} alt={alt} /><div className="gallery-overlay"><span>{label}</span></div>
               </div>
             ))}
@@ -204,22 +222,19 @@ Please confirm the availability and price. Thank you.`;
           </form>
         </section>
 
-        <section className="reviews-section" id="reviews">
-          <div className="section-heading">
-            <p>SAMPLE REVIEW LAYOUT</p><h2>Client Love</h2>
-            <span>These are preview samples only. Replace them with verified client feedback before publishing.</span>
-          </div>
-          <div className="reviews-grid">
-            {[
-              ["அக்ஷயா", "Nail Art", "Nail work மிகவும் neat-ஆவும் அழகாகவும் இருந்தது. நான் கேட்ட design-ஐ கவனமாக செய்து கொடுத்தார்கள்."],
-              ["தர்ஷினி", "Eyelash Extensions", "Service friendly-ஆ இருந்தது. Lashes natural look-ஆவும் comfortable-ஆவும் இருந்தது."],
-              ["கீர்த்தனா", "Bridal Makeup", "எனக்கு பொருத்தமான bridal look-ஐ அழகாக create செய்தார்கள். முழு experience-மும் comfortable-ஆ இருந்தது."],
-            ].map(([name, service, review]) => (
-              <article className="review-card" key={name}>
-                <div className="review-stars">★★★★★</div><p>{review}</p>
-                <div className="review-client"><div className="client-avatar">{name[0]}</div><div><h3>{name}</h3><span>{service} · Preview sample</span></div></div>
-              </article>
-            ))}
+        <section className="review-collection-section" id="reviews">
+          <div className="review-collection-card">
+            <div className="review-quote-mark">“</div>
+            <p className="review-label">CUSTOMER REVIEWS</p>
+            <h2>Your Experience Matters</h2>
+            <div className="review-stars-display">★★★★★</div>
+            <p className="review-collection-copy">
+              Verified customer stories will be featured here soon. Visited
+              ANN Beauty Bar? Share your experience with us on WhatsApp.
+            </p>
+            <a href={reviewWhatsappUrl} target="_blank" rel="noreferrer" className="review-button">
+              Share Your Review
+            </a>
           </div>
         </section>
 
