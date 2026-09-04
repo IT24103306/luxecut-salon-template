@@ -150,7 +150,7 @@ Please confirm the availability and price. Thank you.`;
 
         <section className="about-section" id="about">
           <div className="about-images">
-            <div className="about-main-image"><img src="/ann-traditional-bride.jpg" alt="Traditional red saree and gold jewellery — stock bridal inspiration" /></div>
+            <div className="about-main-image"><img src="/ann-pink-makeup.webp" alt="Pink makeup products, brushes and roses — beauty inspiration" loading="lazy" decoding="async" /></div>
             <div className="experience-box"><strong>6</strong><span>Specialist Services</span></div>
           </div>
           <div className="about-content">
