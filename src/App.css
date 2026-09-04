@@ -1785,6 +1785,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: #694252;
 }
 
+/* Mobile contact shortcut stays in the page flow instead of covering content. */
+@media (max-width: 650px) {
+  .whatsapp-button {
+    position: static;
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    padding: 16px 20px calc(16px + env(safe-area-inset-bottom, 0px));
+    justify-content: center;
+    border-radius: 0;
+    box-shadow: none;
+    background: #087c3c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .footer { padding: 32px 6% 20px; }
+  .footer-content { gap: 24px; }
+  .footer-brand p { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+  .footer-links { gap: 4px; }
+  .footer-links h3 { margin-bottom: 6px; }
+  .footer-links a { display: flex; align-items: center; min-height: 44px; }
+  .footer-links p { line-height: 1.6; }
+  .footer-bottom { margin-top: 24px; padding-top: 16px; gap: 8px; }
+}
+
 /* Clear phone actions and an uncropped bridal portrait. */
 .desi-highlight-image { background: #efd3df; display: flex; align-items: center; justify-content: center; }
 .desi-highlight-image img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; }

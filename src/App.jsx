@@ -140,7 +140,7 @@ Please confirm the availability and price. Thank you.`;
               </article>
             ))}
           </div>
-          <a href="#booking" className="view-services-button">View All Services</a>
+          <a href="#booking" className="view-services-button">Book an Appointment</a>
         </section>
 
         <section className="about-section" id="about">
