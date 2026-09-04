@@ -1497,10 +1497,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   box-shadow: 0 6px 18px rgba(152, 34, 81, .22);
 }
 .hero-overlay {
-  background: linear-gradient(100deg, rgba(71, 12, 39, .91), rgba(145, 30, 77, .75) 55%, rgba(201, 70, 125, .38));
+  background:
+    linear-gradient(0deg, rgba(36, 19, 32, .58), transparent 32%),
+    linear-gradient(100deg, rgba(45, 23, 43, .94) 0%, rgba(65, 35, 56, .84) 36%, rgba(109, 72, 89, .42) 67%, rgba(240, 197, 208, .12) 100%);
 }
 .hero-description { color: #fff1f7; }
-.hero-primary-button { border-radius: 8px; box-shadow: 0 8px 24px #42102a30; }
+.hero-primary-button { color: #59233e; background-color: #fff8ee; border-color: #fff8ee; border-radius: 8px; box-shadow: 0 8px 24px #42102a30; }
+.hero-primary-button:hover { color: #59233e; background-color: #f6dbe5; border-color: #f6dbe5; }
 .hero-secondary-button { border-radius: 8px; }
 .services-section {
   background: radial-gradient(ellipse at top right, #ffc8df, transparent 65%), #ffeaf2;
@@ -1554,5 +1557,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer { background: #481129; }
 .footer-links a:hover { color: #ffd0e4; }
 @media (max-width: 850px) {
-  .hero-overlay { background: linear-gradient(160deg, rgba(80, 17, 44, .86), rgba(143, 31, 77, .78)); }
+  .hero-overlay { background: linear-gradient(160deg, rgba(45, 23, 43, .9), rgba(65, 35, 56, .8) 60%, rgba(75, 44, 61, .7)); }
 }
