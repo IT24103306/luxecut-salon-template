@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://www.annbeauty.com.lk/sitemap.xml
